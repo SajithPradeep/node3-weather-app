@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    {{>header}}
+    <div class="main-content">
+        <p>Welcome to the Weather App</p>
+        <form>
+            <input type="text" placeholder="Enter Location">
+            <button>Search</button>
+        </form>
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+    </div>
+    {{>footer}}
+</body>
+
+{{!-- this has to be moved here. Otherwise app.js will execute before loading the input form in body --}}
+<script src="/js/app.js"></script>
+
+</html>
