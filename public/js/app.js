@@ -9,7 +9,8 @@
 
 // fetching the weather information 
 const getWeather = (searchString, callback) => {
-    fetch("http://localhost:3000/weather?search=" + searchString).then(response => {
+    // removing http:local host while pushing to heroku
+    fetch("/weather?search=" + searchString).then(response => {
         response.json().then(data => {
             if (data.error) {
                 callback(data.error, undefined);
